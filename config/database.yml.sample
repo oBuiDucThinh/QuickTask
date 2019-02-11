@@ -1,0 +1,20 @@
+default: &default
+  adapter: mysql2
+  pool: 5
+  username: root
+  password:
+
+development: &development
+  <<: *default
+  host: 127.0.0.1
+  database: Quick_Task_development
+
+test: &test
+  <<: *default
+  host: 127.0.0.1
+  database: Quick_Task_test
+
+production: &production
+  <<: *default
+  host: 127.0.0.1
+  database: Quick_Task
